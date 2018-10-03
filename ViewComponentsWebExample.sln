@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewComponentsWebExample", "ViewComponentsWebExample\ViewComponentsWebExample.csproj", "{D78BED2B-AC66-40AB-8719-79A716500E8F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataProvider", "DataProvider\DataProvider.csproj", "{2074C247-DCC5-4030-8EA2-F98BA23C2A7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D78BED2B-AC66-40AB-8719-79A716500E8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78BED2B-AC66-40AB-8719-79A716500E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78BED2B-AC66-40AB-8719-79A716500E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78BED2B-AC66-40AB-8719-79A716500E8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2074C247-DCC5-4030-8EA2-F98BA23C2A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2074C247-DCC5-4030-8EA2-F98BA23C2A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2074C247-DCC5-4030-8EA2-F98BA23C2A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2074C247-DCC5-4030-8EA2-F98BA23C2A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACBCE950-CEAD-4CAC-A27C-D958A646A534}
+	EndGlobalSection
+EndGlobal

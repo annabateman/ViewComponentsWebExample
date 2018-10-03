@@ -1,0 +1,11 @@
+﻿@model FilmViewModel
+
+@{
+    ViewData["Title"] = "Film View";
+}
+
+<h2>Film View Using Tag Helper</h2>
+
+<film-detail asp-for="Film"></film-detail>
+
+<vc:film-detail film="@Model.Film"></vc:film-detail>
