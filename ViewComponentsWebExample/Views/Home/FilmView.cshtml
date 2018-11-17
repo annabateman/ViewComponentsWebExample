@@ -6,8 +6,11 @@
 
 <h2>Film View Using Tag Helper</h2>
 
-<film-detail asp-for="Film"></film-detail>
+<film-detail asp-for="Film" show-details="false"></film-detail>
+
+<h2>Film View Using Tag Helper (2)</h2>
+<film-detail asp-for="Film" show-details="true"></film-detail>
 
 <h2>Film View Using View Component</h2>
 
-<vc:film-detail film="@Model.Film"></vc:film-detail>
+<vc:film-detail film-to-display="@Model.Film"></vc:film-detail>
