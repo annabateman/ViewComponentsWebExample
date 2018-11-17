@@ -9,10 +9,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="films.json">
+    <None Update="film.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="persons.json">
+    <None Update="person.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewComponentsWebExample", "ViewComponentsWebExample\ViewComponentsWebExample.csproj", "{D78BED2B-AC66-40AB-8719-79A716500E8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewComponentsWebExample", "ViewComponentsWebExample\ViewComponentsWebExample.csproj", "{D78BED2B-AC66-40AB-8719-79A716500E8F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataProvider", "DataProvider\DataProvider.csproj", "{2074C247-DCC5-4030-8EA2-F98BA23C2A7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VIewComponentUnitTest", "VIewComponentUnitTest\VIewComponentUnitTest.csproj", "{9AEC7104-FBBA-453A-954B-773A4DF04DC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2074C247-DCC5-4030-8EA2-F98BA23C2A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2074C247-DCC5-4030-8EA2-F98BA23C2A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2074C247-DCC5-4030-8EA2-F98BA23C2A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AEC7104-FBBA-453A-954B-773A4DF04DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AEC7104-FBBA-453A-954B-773A4DF04DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AEC7104-FBBA-453A-954B-773A4DF04DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AEC7104-FBBA-453A-954B-773A4DF04DC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

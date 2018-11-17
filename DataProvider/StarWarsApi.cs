@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace DataProvider
@@ -38,8 +40,11 @@ namespace DataProvider
         }
 
         private IList<T> GetResultsOverride() {
-            //in a real-world situation, do some actual error handling and don't include the hard-coded results file in your project
-            return JsonConvert.DeserializeObject<StarWarsApiListResult<T>>(System.IO.File.ReadAllText($@"C:\Personal\CodeCamp\SourceProjects\ViewComponentsWebExample\DataProvider\{typeof(T).Name}s.json"))?.Results;
+            string currentRunningPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            string fileName = $"{currentRunningPath}\\{typeof(T).Name}.json";
+            string fileContents = File.ReadAllText(fileName);
+
+            return JsonConvert.DeserializeObject<StarWarsApiListResult<T>>(fileContents)?.Results;
         }
     }
 }

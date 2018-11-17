@@ -16,26 +16,23 @@ namespace ViewComponentsWebExample.CustomComponents {
                 return;
             }
             Film film = (Film)For.Model;
-
-            TagBuilder outerDiv = new TagBuilder("div");
+            output.TagName = "div";
 
             TagBuilder label = new TagBuilder("label");
             label.InnerHtml.AppendHtml(nameof(film.Title).CamelCaseToWords());
-            outerDiv.InnerHtml.AppendHtml(label);
+            output.Content.AppendHtml(label);
 
             TagBuilder div = new TagBuilder("div");
             div.InnerHtml.AppendHtml(film.Title);
-            outerDiv.InnerHtml.AppendHtml(div);
+            output.Content.AppendHtml(div);
 
             label = new TagBuilder("label");
             label.InnerHtml.AppendHtml(nameof(film.OpeningCrawl).CamelCaseToWords());
-            outerDiv.InnerHtml.AppendHtml(label);
+            output.Content.AppendHtml(label);
 
             div = new TagBuilder("div");
             div.InnerHtml.AppendHtml(film.OpeningCrawl);
-            outerDiv.InnerHtml.AppendHtml(div);
-
-            output.Content.SetHtmlContent(outerDiv);
+            output.Content.AppendHtml(div);
         }
     }
 }

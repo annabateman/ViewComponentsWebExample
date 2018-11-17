@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ViewComponentsWebExample.CustomComponents;
 
 namespace ViewComponentsWebExample {
     public class Startup {
@@ -27,7 +28,9 @@ namespace ViewComponentsWebExample {
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddMvcOptions(m => m.ModelMetadataDetailsProviders.Add(new FriendlyDisplayMetadataProvider())); ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
