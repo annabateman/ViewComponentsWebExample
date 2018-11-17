@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using ViewComponentsWebExample.CustomComponents;
 
 namespace ViewComponentsWebExample {
@@ -31,6 +29,14 @@ namespace ViewComponentsWebExample {
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddMvcOptions(m => m.ModelMetadataDetailsProviders.Add(new FriendlyDisplayMetadataProvider())); ;
+
+
+            var assembly = typeof(ViewComponentClassLibrary.SoupedUpGrid).GetTypeInfo().Assembly;
+            //installed with nuget package: Microsoft.Extensions.FileProviders.Embedded
+            var embeddedFileProvider = new EmbeddedFileProvider(assembly, "ViewComponentClassLibrary");
+            services.Configure<RazorViewEngineOptions>(options => {
+                options.FileProviders.Add(embeddedFileProvider);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DataProvider;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Serialization;
 using ViewComponentsWebExample.Models;
 
 namespace ViewComponentsWebExample.Controllers {
@@ -18,6 +19,21 @@ namespace ViewComponentsWebExample.Controllers {
             FilmViewModel model = new FilmViewModel() {
                 Film = await apiResult.RetrieveItem("films", filmId)
             };
+            return View(model);
+        }
+
+        public async Task<JsonResult> FilmsData() {
+            StarWarsApi<Film> apiResult = new StarWarsApi<Film>();
+            return Json(await apiResult.RetrieveItemList("films"),
+                new Newtonsoft.Json.JsonSerializerSettings() {
+                    ContractResolver = new DefaultContractResolver()
+                }
+            );
+        }
+
+        public async Task<IActionResult> FilmListing(int filmId) {
+            StarWarsApi<Film> apiResult = new StarWarsApi<Film>();
+            var model = await apiResult.RetrieveItemList("films");
             return View(model);
         }
 
