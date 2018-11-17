@@ -1,0 +1,11 @@
+﻿@model DataProvider.Film
+
+<h3>Razor View Roulette, which one will it be?</h3>
+If you create a local Razor view that corresponds to the same View Component in an external class library,
+the local view will be served first, overriding the one in the class library. I created this to demonstrate the 
+possible consequences in doing this. Rename this file to Default.cshtml and run the FilmListing action. This will cause 
+an exception as I used the wrong model.
+<div>
+    Here's my film episode: @Model.EpisodeId
+</div>
+<div></div>
